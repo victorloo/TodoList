@@ -48,4 +48,8 @@ export class TodoService {
   switchChecked(todo: Todo) {
     todo.checked = !todo.checked;
   }
+
+  deleteTodo(todo: Todo) {
+    this.todoes = this.todoes.filter(thatTodo => thatTodo.id !== todo.id);
+  }
 }
