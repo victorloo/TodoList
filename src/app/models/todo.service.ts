@@ -40,4 +40,12 @@ export class TodoService {
   ];
 
   constructor() { }
+
+  getTodoes() {
+    return this.todoes;
+  }
+
+  switchChecked(todo: Todo) {
+    todo.checked = !todo.checked;
+  }
 }
