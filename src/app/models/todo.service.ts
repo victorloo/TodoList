@@ -45,6 +45,14 @@ export class TodoService {
     return this.todoes;
   }
 
+  addTodo(content: string) {
+    this.todoes.push({
+      id: this.todoes.length + 1,
+      content: content,
+      checked: false
+    })
+  }
+
   switchChecked(todo: Todo) {
     todo.checked = !todo.checked;
   }

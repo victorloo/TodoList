@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../models/todo.service';
 
 @Component({
   selector: 'app-add-form',
@@ -10,15 +11,13 @@ export class AddFormComponent implements OnInit {
   placeholder: string = 'Title...';
   todoContent: string = '';
 
-  @Output() addTodoContent = new EventEmitter();
-
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
   }
 
   addTodo($event: MouseEvent) {
-    this.addTodoContent.emit(this.todoContent);
+    this.todoService.addTodo(this.todoContent);
   }
 
 }
