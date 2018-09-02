@@ -17,6 +17,10 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
   }
 
+  switchChecked(todo: Todo) {
+    todo.checked = !todo.checked;
+  }
+
   delete(todo: Todo) {
     this.deleteTodo.emit(todo);
   }

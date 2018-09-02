@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let todo of todoes" [class.checked]="todo.checked" >
+  <li *ngFor="let todo of todoes" [class.checked]="todo.checked" (click)="switchChecked(todo)" >
     {{todo.content}}
     <span class="close" (click)="delete(todo)" >x</span>
   </li>
