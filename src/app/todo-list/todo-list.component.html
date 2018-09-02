@@ -1,3 +1,6 @@
-<p>
-  todo-list works!
-</p>
+<ul>
+  <li *ngFor="let todo of todoes" [class.checked]="todo.checked" >
+    {{todo.content}}
+    <span class="close">x</span>
+  </li>
+</ul>
