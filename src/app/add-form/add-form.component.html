@@ -1,2 +1,2 @@
-<input type="text" [placeholder]="placeholder" >
-<span class="addBtn">Add</span>
+<input type="text" [placeholder]="placeholder" [(ngModel)]="todoContent" >
+<span class="addBtn" (click)="addTodo($event)" >Add</span>

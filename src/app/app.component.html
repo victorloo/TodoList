@@ -1,5 +1,5 @@
 <div class="header">
   <h2>{{title}}</h2>
-  <app-add-form></app-add-form>
+  <app-add-form (addTodoContent)="addTodo($event)" ></app-add-form>
 </div>
 <app-todo-list [todoes]="todoes" (deleteTodo)="deleteTodo($event)" ></app-todo-list>

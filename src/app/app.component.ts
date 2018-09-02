@@ -42,6 +42,14 @@ export class AppComponent {
     }
   ];
 
+  addTodo(content: string) {
+    this.todoes.push({
+      id: this.todoes.length +1,
+      content: content,
+      checked: false
+    })
+  }
+
   deleteTodo(todo: Todo) {
     this.todoes = this.todoes.filter(thatTodo => thatTodo.id !== todo.id);
   }
