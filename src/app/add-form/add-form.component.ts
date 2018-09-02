@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFormComponent implements OnInit {
 
+  placeholder: string = 'Title...';
+
   constructor() { }
 
   ngOnInit() {
