@@ -41,4 +41,8 @@ export class AppComponent {
       checked: false
     }
   ];
+
+  deleteTodo(todo: Todo) {
+    this.todoes = this.todoes.filter(thatTodo => thatTodo.id !== todo.id);
+  }
 }
