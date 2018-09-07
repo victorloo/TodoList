@@ -47,7 +47,7 @@ export class TodoService {
 
   addTodo(content: string) {
     this.todoes.push({
-      id: this.todoes.length + 1,
+      id: this.todoes.slice(-1)[0].id + 1,
       content: content,
       checked: false
     })
