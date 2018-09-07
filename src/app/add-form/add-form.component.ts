@@ -18,6 +18,7 @@ export class AddFormComponent implements OnInit {
 
   addTodo($event: MouseEvent) {
     this.todoService.addTodo(this.todoContent);
+    this.todoContent = '';
   }
 
 }
